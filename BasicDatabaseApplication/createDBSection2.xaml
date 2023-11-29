@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="BasicDatabaseApplication.createDBSection2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BasicDatabaseApplication"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.12*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tableLabel" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="239"><Run/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="r1c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="1"/>
+        <TextBox x:Name="r1c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="r1c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="1" Grid.Column="2"/>
+        <TextBox x:Name="r1c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="1" Grid.Column="3"/>
+        <TextBox x:Name="r1c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="1" Grid.Column="4"/>
+        <TextBox x:Name="r2c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="2"/>
+        <TextBox x:Name="r2c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="r2c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="2" Grid.Column="2"/>
+        <TextBox x:Name="r2c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="2" Grid.Column="3"/>
+        <TextBox x:Name="r2c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="2" Grid.Column="4"/>
+        <TextBox x:Name="r3c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="3"/>
+        <TextBox x:Name="r3c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="r3c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="3" Grid.Column="2"/>
+        <TextBox x:Name="r3c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="3" Grid.Column="3"/>
+        <TextBox x:Name="r3c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="3" Grid.Column="4"/>
+        <TextBox x:Name="r4c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="4"/>
+        <TextBox x:Name="r4c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="4" Grid.Column="1"/>
+        <TextBox x:Name="r4c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="4" Grid.Column="2"/>
+        <TextBox x:Name="r4c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="4" Grid.Column="3"/>
+        <TextBox x:Name="r4c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="4" Grid.Column="4"/>
+        <TextBox x:Name="r5c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="5"/>
+        <TextBox x:Name="r5c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="5" Grid.Column="1"/>
+        <TextBox x:Name="r5c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="5" Grid.Column="2"/>
+        <TextBox x:Name="r5c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="5"  Grid.Column="3"/>
+        <TextBox x:Name="r5c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271"  Grid.Row="5" Grid.Column="4"/>
+        <TextBox x:Name="r6c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="6"/>
+        <TextBox x:Name="r6c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="6" Grid.Column="1"/>
+        <TextBox x:Name="r6c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="6" Grid.Column="2"/>
+        <TextBox x:Name="r6c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="6" Grid.Column="3"/>
+        <TextBox x:Name="r6c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="6" Grid.Column="4"/>
+        <TextBox x:Name="r7c1" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="7"/>
+        <TextBox x:Name="r7c2" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="7" Grid.Column="1"/>
+        <TextBox x:Name="r7c3" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="7" Grid.Column="2"/>
+        <TextBox x:Name="r7c4" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="7" Grid.Column="3"/>
+        <TextBox x:Name="r7c5" HorizontalAlignment="Left" Margin="32,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.Row="7" Grid.Column="4" />
+
+
+        <Label x:Name="colOneLabel" Content="Label" HorizontalAlignment="Left" Margin="32,32,0,0" VerticalAlignment="Top" Width="271" Height="49"/>
+        <Label x:Name="colTwoLabel" Content="Label" HorizontalAlignment="Left" Margin="32,32,0,0" VerticalAlignment="Top" Width="271" Height="49" Grid.Column="1"/>
+        <Label x:Name="colThreeLabel" Content="label" HorizontalAlignment="Left" Margin="32,32,0,0" VerticalAlignment="Top" Width="271" Height="50" Grid.Column="2"/>
+        <Label x:Name="colFourLabel" Content="label" Margin="32,32,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="271" Height="49" Grid.Column="3"/>
+        <Label x:Name="colFiveLabel" Content="label" Margin="32,32,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="271" Height="49" Grid.Column="4"/>
+        <Button x:Name="addData" Content="Add Data" Grid.Column="4" HorizontalAlignment="Left" Margin="112,0,0,0" Grid.Row="8" VerticalAlignment="Center" Height="35" Width="110" FontSize="16" Click="addData_Click"/>
+
+
+    </Grid>
+</UserControl>
