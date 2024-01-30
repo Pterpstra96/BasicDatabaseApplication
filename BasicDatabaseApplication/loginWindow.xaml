@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BasicDatabaseApplication"
         mc:Ignorable="d"
-        Title="loginWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="Login Page:" HorizontalAlignment="Left" Margin="46,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="189" FontSize="22">
+        Title="Login" Height="450" Width="800">
+    <Grid Background="#FF50A1F1">
+        <Label Content="Login Page:" HorizontalAlignment="Left" Margin="46,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="189" FontSize="22" Foreground="White" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,12 +17,20 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Username:" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="usernameBox" HorizontalAlignment="Left" Margin="135,128,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
-        <TextBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="135,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="282"/>
+        <Rectangle HorizontalAlignment="Center" Height="123" Margin="0,140,0,0" VerticalAlignment="Top" Width="463" Fill="White" RadiusX="10" RadiusY="10">
+           </Rectangle>
+
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="207,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="209,0,0,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="usernameBox" HorizontalAlignment="Left" Margin="288,177,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+        <TextBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="288,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="282"/>
+
+
         <Button x:Name="loginSubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="632,322,0,0" VerticalAlignment="Top" Height="51" Width="117" Click="loginButton_Click"/>
-        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" Margin="501,322,0,0" VerticalAlignment="Top" Height="51" Width="117" Click="backButton_Click"/>
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" Margin="499,322,0,0" VerticalAlignment="Top" Height="51" Width="117" Click="backButton_Click"/>
+
+        <Grid/>
+
 
     </Grid>
 </Window>

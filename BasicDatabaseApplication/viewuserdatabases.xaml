@@ -17,8 +17,22 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="viewbutton" Content="View Data" HorizontalAlignment="Left" Margin="318,603,0,0" VerticalAlignment="Top" Height="71" Width="159" Click="viewbutton_Click" IsEnabled="False"/>
         <Label x:Name="titleLabel" Content="Label" HorizontalAlignment="Left" Margin="38,26,0,0" VerticalAlignment="Top" Height="62" Width="407" FontSize="18"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="620,88,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dbgrid" Margin="293,119,45,159" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" MinRowHeight="0" SelectionChanged="dbgrid_SelectionChanged"/>
+        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Margin="1378,609,0,0" VerticalAlignment="Top" Height="50" Width="138" Click="closeButton_Click"/>
+        <Button x:Name="editbutton" Content="Edit Data" HorizontalAlignment="Left" Margin="511,603,0,0" VerticalAlignment="Top" Height="71" Width="159" IsEnabled="False" Click="editbutton_Click"/>
+        <TextBox x:Name="editItem1" HorizontalAlignment="Left" Margin="293,552,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="17" IsEnabled="False" Opacity="0"/>
+        <TextBox x:Name="editItem2" HorizontalAlignment="Left" Margin="563.25,552,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="17" Opacity="0" TextChanged="editItems_TextChanged"/>
+        <TextBox x:Name="editItem3" HorizontalAlignment="Left" Margin="833.5,552,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="17" Opacity="0" TextChanged="editItems_TextChanged"/>
+        <TextBox x:Name="editItem4" HorizontalAlignment="Left" Margin="1103.75,552,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="17" Opacity="0" TextChanged="editItems_TextChanged"/>
+        <TextBox x:Name="editItem5" HorizontalAlignment="Left" Margin="1374,552,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="17" Opacity="0" TextChanged="editItems_TextChanged"/>
+        <Button x:Name="changeButton" Content="Commit Changes" HorizontalAlignment="Left" Margin="858,608,0,0" VerticalAlignment="Top" Height="60" Width="132" IsEnabled="False" Opacity="0" Click="changeButton_Click"/>
+        <Label Content="holdval1" HorizontalAlignment="Left" Margin="1447,26,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Button x:Name="addDataButton" Content="Add Entries" HorizontalAlignment="Left" Margin="697,608,0,0" VerticalAlignment="Top" Height="60" Width="133" IsEnabled="False" Opacity="0" Click="addDataButton_Click"/>
+        <Button x:Name="deleteItemButton" Content="Delete Entry" HorizontalAlignment="Left" Margin="1029,608,0,0" VerticalAlignment="Top" Height="60" Width="132" IsEnabled="False" Opacity="0" Click="deleteButton_Click"/>
+
 
 
     </Grid>

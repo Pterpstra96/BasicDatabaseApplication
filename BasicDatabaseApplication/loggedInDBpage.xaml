@@ -7,11 +7,10 @@
         mc:Ignorable="d"
         Title="Application Home Page" Height="800" Width="1600">
     <Grid Margin="0,0,-27,-27">
-        <Button Content="New Database" HorizontalAlignment="Left" Margin="57,329,0,0" VerticalAlignment="Top" Height="79" Width="174" Click="newDbButton_Click"/>
-        <Button Content="Edit Database Entries" HorizontalAlignment="Left" Margin="57,233,0,0" VerticalAlignment="Top" Height="79" Width="174"/>
-        <Button Content="View Database Information" HorizontalAlignment="Left" Margin="57,138,0,0" VerticalAlignment="Top" Height="79" Width="174" Click="viewDBButton_Click"/>
-        <Label Content="Welcome to the application:" HorizontalAlignment="Center" Margin="0,43,0,0" VerticalAlignment="Top" Width="687" FontSize="24"/>
-        <Button x:Name="logoutButton" Content="Sign-Out" HorizontalAlignment="Left" Margin="1221,678,0,0" VerticalAlignment="Top" Height="45" Width="119" Click="logoutButton_Click"/>
+        <Button Content="New Database" HorizontalAlignment="Left" Margin="78,623,0,0" VerticalAlignment="Top" Height="100" Width="231" Click="newDbButton_Click"/>
+        <Button Content="View Database Information" HorizontalAlignment="Left" Margin="57,138,0,0" VerticalAlignment="Top" Height="119" Width="273" Click="viewDBButton_Click"/>
+        <Label Content="Welcome to the application:" HorizontalAlignment="Left" Margin="595,69,0,0" VerticalAlignment="Top" Width="687" FontSize="24"/>
+        <Button x:Name="logoutButton" Content="Sign-Out" HorizontalAlignment="Left" Margin="1289,634,0,0" VerticalAlignment="Top" Height="78" Width="194" Click="logoutButton_Click"/>
 
     </Grid>
 </Window>

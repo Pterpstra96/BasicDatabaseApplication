@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace BasicDatabaseApplication.Services
     class DBaccess
     {
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=BasicDatabaseApplicationDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionStringMaster = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
 
         bool added = false;
 
@@ -234,17 +237,17 @@ namespace BasicDatabaseApplication.Services
 
         public List<string> currentUserDBList()
         {
-        String SqlStatement = "SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_name LIKE '%" + getUserId() +  "'";
-            String CountStatement = "SELECT COUNT(table_name) FROM INFORMATION_SCHEMA.TABLES WHERE table_name LIKE '%" + getUserId() +  "';";
+            String SqlStatement = "SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_name LIKE '%" + getUserId() + "'";
+            String CountStatement = "SELECT COUNT(table_name) FROM INFORMATION_SCHEMA.TABLES WHERE table_name LIKE '%" + getUserId() + "';";
 
-        using (SqlConnection connection = new SqlConnection(connectionString))
-        {       
-        SqlCommand command = new SqlCommand(SqlStatement, connection);
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(SqlStatement, connection);
                 SqlCommand countComm = new SqlCommand(CountStatement, connection);
                 connection.Open();
                 int count = (int)countComm.ExecuteScalar();
-        SqlDataReader reader = command.ExecuteReader();
-        List<string> currentDBList = new List<string>();
+                SqlDataReader reader = command.ExecuteReader();
+                List<string> currentDBList = new List<string>();
 
                 while (reader.Read())
                 {
@@ -257,7 +260,7 @@ namespace BasicDatabaseApplication.Services
                             if (i == count)
                             { return currentDBList; }
                         }
-                        
+
                     }
                     catch (Exception e) { Console.WriteLine(e); }
                 }
@@ -266,7 +269,7 @@ namespace BasicDatabaseApplication.Services
 
 
                 return currentDBList;
-        }
+            }
         }
 
         public string getUserName()
@@ -295,6 +298,113 @@ namespace BasicDatabaseApplication.Services
             }
 
             return output;
+        }
+
+        public DataTable ViewTableData(string tablename)
+        {
+            DataTable currentData = new DataTable(tablename);
+
+            string currentTable = tablename + getUserId();
+            string sqlStatement = "select * from dbo." + currentTable + ";";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(sqlStatement, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(currentData);
+                return currentData;
+
+
+
+            }
+
+
+
+        }
+        public bool deleteAllData()
+        {
+            bool deleted = false;
+
+
+
+            return deleted;
+
+        }
+
+        public bool intializeDataBase()
+        {
+            bool initialized = false;
+
+            string SqlStatement = File.ReadAllText(@"L:\Project\BasicDatabaseApplication\BasicDatabaseApplication\dbInitializationScript.txt");
+           
+            using (SqlConnection connection = new SqlConnection(connectionStringMaster))
+            {
+                SqlCommand command = new SqlCommand(SqlStatement, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                
+            }
+
+            return initialized;
+        
+        }
+        public bool editDBEntry(string tablename, string colOne, string colTwo, string colThree, string colFour, string colFive, string col1Val, string col2Val, string col3Val, string col4Val, string col5Val)
+        {
+            bool edited = false;
+            string currentTable = tablename + getUserId();
+            string sqlStatement = "UPDATE " + currentTable + " SET " + colOne + " = " + col1Val + ", " + colTwo + " = '" + col2Val + "', " + colThree + " = '" + col3Val + "', " + colFour + " = '" + col4Val + "', " + colFive + " = '" + col5Val + "' WHERE " + colOne + " = " + col1Val + ";";
+
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(sqlStatement, connection);
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    added = true;
+                    return added;
+                    
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                
+                }
+
+            }
+
+
+            return edited;
+        
+        }
+
+        public bool deleteSingleItem(string tablename, string colOne, string col1val)
+        {
+            bool deleted = false;
+
+            string currentTable = tablename + getUserId();
+            string sqlStatement = "DELETE FROM " + currentTable + " WHERE " + colOne + " = " + col1val ;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand command = new SqlCommand(sqlStatement, connection);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    deleted = true;
+                    return deleted;
+                }
+            }
+            catch (Exception r)
+            { Console.WriteLine(r);
+                return deleted;
+            }
+        
         }
     }
 }

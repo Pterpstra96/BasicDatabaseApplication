@@ -24,9 +24,9 @@ namespace BasicDatabaseApplication
         public newDBWindow()
         {
             InitializeComponent();
-            ObservableCollection<string> cmbDataType = new ObservableCollection<string>();
-            cmbDataType.Add("Text"); cmbDataType.Add("Integer"); cmbDataType.Add("Date/Time");
-            dataTypeComboOne.ItemsSource = cmbDataType; dataTypeComboTwo.ItemsSource = cmbDataType; dataTypeComboThree.ItemsSource = cmbDataType; dataTypeComboFour.ItemsSource = cmbDataType; dataTypeComboFive.ItemsSource = cmbDataType;
+            ObservableCollection<string> cmbDataType = new ObservableCollection<string>(); ObservableCollection<string> idComboType = new ObservableCollection<string>();
+            cmbDataType.Add("Text"); cmbDataType.Add("Integer"); cmbDataType.Add("Date/Time"); idComboType.Add("Integer");
+            dataTypeComboOne.ItemsSource = idComboType; dataTypeComboOne.SelectedIndex = 0 ; dataTypeComboTwo.ItemsSource = cmbDataType; dataTypeComboThree.ItemsSource = cmbDataType; dataTypeComboFour.ItemsSource = cmbDataType; dataTypeComboFive.ItemsSource = cmbDataType;
 
         }
 
@@ -43,7 +43,7 @@ namespace BasicDatabaseApplication
             try { access.createDB(tableName, colOne, colTwo, colThree, colFour, colFive, col1type, col2type, col3type, col4type, col5type);
 
 
-                bool created = false;
+                
 
                 createDBSection2 zr = new createDBSection2();
                 this.Content = zr;

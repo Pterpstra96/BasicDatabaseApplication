@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasicDatabaseApplication.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,15 @@ namespace BasicDatabaseApplication
         public MainWindow()
         {
             InitializeComponent();
+
+            DBaccess access = new DBaccess();
+
+            try
+            {
+                access.intializeDataBase();   // INITIALIZES SQL SCRIPT TO CONSTRUCT DB
+            }
+            catch (Exception e)
+            { Console.WriteLine(e); }
         }
 
         private void registerNavButton_Click(object sender, RoutedEventArgs e)
@@ -34,6 +44,11 @@ namespace BasicDatabaseApplication
         {
             loginWindow log = new loginWindow();
             log.Show();
+        }
+
+        private void uninstallButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

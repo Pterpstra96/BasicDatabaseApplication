@@ -7,16 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="0,0,-332,-155">
-        <Label Content="Basic Database Application" Margin="205,38,550,466" FontSize="30"/>
-        <Button x:Name="registerNavButton" Content="Register New User" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Center" Height="233" Width="286" Click="registerNavButton_Click" FontSize="26">
+        <Label Content="Basic Database Application" Margin="205,38,545,466" FontSize="30"/>
+        <Button x:Name="registerNavButton" Content="Register New User" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Center" Height="233" Width="286" Click="registerNavButton_Click" FontSize="26" FontStyle="Normal" FontWeight="Bold" FontStretch="Normal" BorderBrush="Black" Foreground="White" Background="#FF50A1F1" BorderThickness="0,1,1,1" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+                
+            </Button.Resources>
+            
+            <Button.Style>
+                <Style></Style>
+            </Button.Style>
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="loginNavButton" Content="Login Existing User" HorizontalAlignment="Left" VerticalAlignment="Center" Height="233" Width="286" Click="loginnavButton_Click" FontSize="26" Margin="444,0,0,0">
+        <Button x:Name="loginNavButton" Content="Login Existing User" HorizontalAlignment="Left" VerticalAlignment="Center" Height="233" Width="286" Click="loginnavButton_Click" FontSize="26" Margin="444,0,0,0" Background="#FF50A1F1" FontStyle="Normal" FontWeight="Bold" FontStretch="Normal" BorderBrush="Black" Foreground="White" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+
+            </Button.Resources>
+
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <Button x:Name="uninstallButton" Content="Uninstall Application Data" HorizontalAlignment="Left" Margin="608,16,0,0" VerticalAlignment="Top" Height="28" Width="153" Click="uninstallButton_Click"/>
     </Grid>
 </Window>
